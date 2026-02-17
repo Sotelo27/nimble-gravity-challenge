@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# Nimble Gravity - Job Application Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mini aplicación desarrollada en **React + TypeScript + Vite** que consume la API provista por Nimble Gravity para postularse a una posición.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Descripción
 
-## React Compiler
+La aplicación permite:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Ingresar un email para obtener los datos del candidato.
+- Obtener y mostrar el listado de posiciones disponibles desde la API.
+- Ingresar la URL del repositorio de GitHub.
+- Enviar la postulación a una posición específica.
+- Manejar estados de carga, éxito y error en la interfaz.
 
-## Expanding the ESLint configuration
+La aplicación interactúa con la API oficial del challenge utilizando requests GET y POST.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tecnologías utilizadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- React
+- TypeScript
+- Vite
+- Fetch API
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📦 Instalación y ejecución
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instalar dependencias:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. Ejecutar el proyecto:
+
+```bash
+npm run dev
+ ```
+
+ La aplicación estará disponible en: http://localhost:5173
+
+---
+
+## 🔗 API utilizada
+
+### BASE_URL
+
+https://botfilter-h5ddh6dye8exb7ha.centralus-01.azurewebsites.net
+
+### Endpoints utilizados
+
+- `GET /api/candidate/get-by-email`
+- `GET /api/jobs/get-list`
+- `POST /api/candidate/apply-to-job`
+
+---
+
+## ✅ Funcionalidades implementadas
+
+- Separación clara de componentes.
+- Tipado fuerte con TypeScript.
+- Manejo de errores de red y de respuestas de la API.
+- Estados de carga y confirmación visual de aplicación exitosa.
+- Configuración de alias para imports más limpios.
+
+---
+
+## 👤 Autor
+
+**Lautaro Martin Sotelo**  
+sotelo-martin@outlook.com
