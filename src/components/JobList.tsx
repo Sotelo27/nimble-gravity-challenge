@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { Job, Candidate } from '../types';
+import type { Job, Candidate } from '@/types';
 import JobItem from './JobItem';
 
 interface JobListProps {

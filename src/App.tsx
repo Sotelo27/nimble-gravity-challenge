@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getCandidateByEmail, getJobs } from './services/api';
-import type { Candidate, Job } from './types';
+import type { Candidate, Job } from '@/types';
 import JobList from './components/JobList';
 import './App.css';
 
