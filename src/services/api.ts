@@ -1,4 +1,10 @@
-import { Candidate, Job, ApplyToJobRequest, ApplyToJobResponse } from '../types';
+import type { 
+  Candidate, 
+  Job, 
+  ApplyToJobRequest, 
+  ApplyToJobResponse 
+} from '../types';
+
 
 const BASE_URL = 'https://botfilter-h5ddh6dye8exb7ha.centralus-01.azurewebsites.net';
 
