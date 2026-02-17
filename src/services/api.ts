@@ -5,7 +5,6 @@ import type {
   ApplyToJobResponse 
 } from '../types';
 
-
 const BASE_URL = 'https://botfilter-h5ddh6dye8exb7ha.centralus-01.azurewebsites.net';
 
 export const getCandidateByEmail = async (email: string): Promise<Candidate> => {
