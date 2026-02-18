@@ -54,7 +54,7 @@ function JobItem({ job, candidate, onApplySuccess }: JobItemProps) {
       borderRadius: '8px',
       backgroundColor: success ? '#f0fff0' : '#fff',
     }}>
-      <h3 style={{ marginTop: 0 }}>{job.title}</h3>
+      <h3 style={{ marginTop: 0, color: '#333' }}>{job.title}</h3>
       <p style={{ color: '#666', fontSize: '14px' }}>Job ID: {job.id}</p>
       
       <div style={{ marginTop: '15px' }}>
